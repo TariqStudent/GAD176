@@ -6,11 +6,12 @@ using UnityEngine;
 public class Enemy_Ranged : Base_Enemy // <-- polymorphism and inheritance from the base enemy, same movement artibutes.
 {
 
-    [SerializeField] public float shootingrange;
-    [SerializeField] public GameObject bullet;
-    [SerializeField] public GameObject bulletParent;
+//these data will be able to manage the shooting range and fire rate
+    public float shootingrange;
+    public GameObject bullet;
+    [Serialized field] public GameObject bulletParent;
     private float NextFireTime;
-    private float firerate = 1f;
+    private float firerate = 1f; //
 
     public override void Attack()
     {
