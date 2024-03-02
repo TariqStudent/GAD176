@@ -7,10 +7,6 @@ public class Enemy_Rotates : Base_Enemy
 {
     [SerializeField] protected float distance;
     [SerializeField] protected float distancebetween;
-    void Start()
-    {
-        
-    }
 
     void Update()
     {
@@ -20,11 +16,11 @@ public class Enemy_Rotates : Base_Enemy
         direction.Normalize();
         float angle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;
 
-
+//an if statment that if the distance between is higher than distance it self, the character will start rotating. and thats by using quaternion.euler code. 
         if (distance < distancebetween)
         {
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
-            transform.rotation = Quaternion.Euler(Vector3.forward * angle);
+            transform.rotation = Quaternion.Euler(Vector3.forward * angle); // <-- the enemy will rotate
         }
 
 
