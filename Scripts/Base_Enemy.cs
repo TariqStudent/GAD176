@@ -4,8 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 
-//this script follow single repoinsibilty princple as this base enemy is inherited several times thorughout the other scripts.
-//and its only function is make the enemy follow the player.
+
 public class Base_Enemy : MonoBehaviour
 {
     [SerializeField] public float speed;
