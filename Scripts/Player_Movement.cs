@@ -7,7 +7,8 @@ using UnityEngine;
 public class charactermovement : MonoBehaviour
 {
 
-    [SerializeField] public float speed = 5f;
+//this data will determine the speed of the player.
+    [SerializeField] public float speed = 6f;
 
 
     void Update()
